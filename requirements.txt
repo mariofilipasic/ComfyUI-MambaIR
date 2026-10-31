@@ -1,0 +1,12 @@
+# Intentionally empty.
+#
+# Everything this pack needs is already installed by ComfyUI itself:
+#   torch, einops, spandrel   (see ComfyUI/requirements.txt)
+#   numpy                     (a torch/ComfyUI dependency)
+#
+# No CUDA toolchain, no mamba_ssm, no causal_conv1d, no timm, no basicsr.
+# The pack ships a pure-PyTorch selective scan so it installs anywhere.
+#
+# Optional speed-up (never required):
+#   pip install triton-windows     # Windows, CPython 3.10-3.14; auto-detected and
+#                                  # adopted only if it is both correct and faster

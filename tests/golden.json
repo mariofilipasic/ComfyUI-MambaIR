@@ -1,0 +1,100 @@
+{
+  "device": "cpu",
+  "generated": "2026-10-24 20:22:41",
+  "input_size": 32,
+  "records": {
+    "MambaIR-real.pth": {
+      "dtype": "torch.float32",
+      "max": 0.842178,
+      "min": 0.367018,
+      "sha256": "01033ca35b7e07f9dad080de9ceefb852065732a52f7ae048c1f70f97085b324",
+      "shape": [
+        1,
+        128,
+        128,
+        3
+      ],
+      "sum": 29753.769492
+    },
+    "MambaIR_CAR_q10.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "18ed806cbe08158ef72ebc144b32c530b54111feffafc3f65de44d9b16e0daf1",
+      "shape": [
+        1,
+        32,
+        32,
+        3
+      ],
+      "sum": 1525.732997
+    },
+    "mambairv2_classicSR_Large_x2.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "80bd878849affa13722adbe0e177acc6a86782750b713d03743c5698631db0bc",
+      "shape": [
+        1,
+        64,
+        64,
+        3
+      ],
+      "sum": 6087.122652
+    },
+    "mambairv2_classicSR_Large_x3.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "10d280f6757cb5625b0ae73c537c8ac091f6e8ef5012424569aa62eb1be9a95d",
+      "shape": [
+        1,
+        96,
+        96,
+        3
+      ],
+      "sum": 13817.630797
+    },
+    "mambairv2_classicSR_Large_x4.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "d141af0cdbe386bbca9886445f74cabffc78e8327fbc7258fd431832923541e2",
+      "shape": [
+        1,
+        128,
+        128,
+        3
+      ],
+      "sum": 24268.060536
+    },
+    "mambairv2_lightSR_x2.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "4d2c3f639a81cedc0cd0a6f69c9a3cdfa38ff4d52f88409c4556123c233d6575",
+      "shape": [
+        1,
+        64,
+        64,
+        3
+      ],
+      "sum": 6125.977123
+    },
+    "realDN.pth": {
+      "dtype": "torch.float32",
+      "max": 0.894947,
+      "min": 0.114121,
+      "sha256": "60008936185a3c83d0d3124fd25724542c436e6b214139862659e062214ce654",
+      "shape": [
+        1,
+        32,
+        32,
+        3
+      ],
+      "sum": 1731.589199
+    }
+  },
+  "seed": 0,
+  "torch": "2.10.0+cu130"
+}

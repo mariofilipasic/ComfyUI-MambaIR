@@ -1,0 +1,23 @@
+{
+  "modules": {
+    "__init__.py": "ba67ad39d35be330f8dbbe65be03f85b4c5ae6ec41383df05e7b9e2eddcc5319",
+    "mambair/__init__.py": "a172ce99f96959a546e06dfce221aee5f60f003919827ec320cbaa66177dcf04",
+    "mambair/apply.py": "ab76551b2c22498c0aeeab23c95b227b7e9e47a44218d24d561b42a8e83b1915",
+    "mambair/archs/__init__.py": "9f1c41491515457b7206ffc5c4fb0b386c1e6ee79aa1886cbc9aaa814522a8a0",
+    "mambair/deterministic.py": "8d7367325ffb68e1b52dc978a8660af9d63a965a31122a90d72c8410d3120355",
+    "mambair/infer.py": "169a36c733eaf651169c27248a5b2577392902ba7c7a96d5c99ae71ce785c51d",
+    "mambair/node_core.py": "27dff8712e1fc245884e48c9e63b3c0de80340487e8860edc3f605ab531f34a8",
+    "mambair/registry.py": "9dcc7ea7a416cf54ab0857e7c3507004eff3a0b05feb3b0351464130fd055585",
+    "mambair/scan.py": "087ca4227f15357aaf36f9f67e71e21924c59537c519996dca08be42f3438c89",
+    "mambair/scan_triton.py": "69cef0cc6d6ce277765a101df26093327fd3b247fc4f0cef8b0ab5ce270e2437",
+    "mambair/spandrel_arch.py": "ca28e9ab7059e1c7eb3d038078eb1827b350b34c948bafae576488631a3a60d5",
+    "mambair/tiling.py": "5258d7406ebf72339fed608d8e01dd13bd1478a6b351c99c0571fd83f6bc0487",
+    "nodes.py": "b6f7583eed78812433e17571a87605087529e948737e63c5926f615c8448b47a"
+  },
+  "vendored": {
+    "mambair/archs/mambair.py": "0f24725e338df6ba9ec3262b08bd5c5b9ce8d785f230d725441ee04185682fb8",
+    "mambair/archs/mambairunet.py": "c02cf8a516a0c2b15dfb9115e402aaedabef9d0ffa3bafa420f619aca0e23594",
+    "mambair/archs/mambairv2.py": "320614d8b38d7476788d9d1f8e7772ddd9a06210a06ddc8505ec827a9dce58cc",
+    "mambair/archs/mambairv2light.py": "e228acff21f648c350dd925919026dd512fc066c2e56f16b9132b004a88999ac"
+  }
+}

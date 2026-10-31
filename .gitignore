@@ -1,0 +1,53 @@
+# Python bytecode and build/packaging output
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test and tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Artefacts of the opt-in ComfyUI server test (RUN_COMFY_SERVER=1), which writes
+# them next to the pack on every run
+comfyui_server_test.log
+comfyui_uninstall_test.log
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Not part of the published pack: the working notes and specs it was built from,
+# and the machine-local agent configuration. Remove either line to publish it.
+.specs/
+.pi/
+
+# Checkpoints are downloaded by the user, never committed: this pack is the code
+# that runs a model, not the model. A stray download must not slip into a commit.
+*.pth
+*.safetensors
+*.ckpt
+*.bin
+
+# A lockfile with no package.json: there is nothing to lock, so it only appears
+# when a tool was run in this directory by mistake
+package-lock.json
+
+# Deliberately NOT ignored, because the suite reads them:
+#   tests/golden*.json        golden output hashes (RUN_GOLDEN=1)
+#   tests/docs_baseline.json  docstring-stripped AST baseline and vendored hashes

@@ -1,0 +1,12 @@
+# Keep the vendored architectures byte-identical on every platform.
+#
+# tests/test_docs_only.py::test_vendored_architectures_are_untouched compares a raw
+# sha256 of these files against tests/docs_baseline.json, and that baseline was
+# captured from a CRLF working tree. Git normalises to LF in the index and would
+# hand a Linux/CI clone LF bytes, failing the check. Pinning the checkout to CRLF
+# makes every platform produce the bytes the baseline expects, and leaves the
+# committed history (and the files themselves) untouched.
+mambair/archs/*.py text eol=crlf
+
+# Everything else: normalise to LF in the index, platform default on checkout.
+* text=auto

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-mambair"
+version = "0.1.0"
+description = "MambaIR / MambaIRv2 state-space upscale and restoration models as native ComfyUI upscale models"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Mario Filipasic" }]
+license = { text = "AGPL-3.0-or-later" }
+dependencies = [
+    # intentionally empty: torch, einops and spandrel ship with ComfyUI
+]
+
+[project.optional-dependencies]
+triton = ["triton-windows; sys_platform == 'win32'", "triton; sys_platform != 'win32'"]
+#: dev-only: the style gate for editors and CI. The test suite enforces the same rules without it.
+dev = ["ruff>=0.6"]
+#: dev-only: optional HTML docs (see docs/style.md). Never a runtime dependency.
+docs = ["pdoc>=14"]
+
+[tool.setuptools]
+py-modules = ["nodes"]
+packages = ["mambair", "mambair.archs"]
+#: both texts ship: the vendored architectures keep their own licence (see PROVENANCE.md).
+#: Kept under [tool.setuptools] rather than [project] so it works with the `setuptools>=61` floor.
+license-files = ["LICENSE", "LICENSE-APACHE-2.0"]
+
+[tool.ruff]
+# vendored upstream code keeps its own (byte-identical) formatting
+extend-exclude = ["mambair/archs/mambair.py", "mambair/archs/mambairunet.py",
+                  "mambair/archs/mambairv2.py", "mambair/archs/mambairv2light.py"]
+
+[tool.ruff.lint]
+select = ["D"]
+ignore = ["D203", "D213"]  # two mutually exclusive Google/Sphinx layout preferences
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+# node boilerplate and framework hooks; the reasons live in docs/docstring-waivers.md
+"nodes.py" = ["D101", "D102", "D105"]

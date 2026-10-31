@@ -1,0 +1,107 @@
+{
+  "device": "cuda",
+  "generated": "2026-10-26 20:36:08",
+  "input_size": 128,
+  "records": {
+    "MambaIR-real.pth": {
+      "dtype": "torch.float32",
+      "max": 0.702318,
+      "min": 0.349733,
+      "sha256": "a159bad511032c81f5575e03f238834183fc72722a709f1c75147edbdbfb379d",
+      "shape": [
+        1,
+        512,
+        512,
+        3
+      ],
+      "sum": 410024.078921,
+      "tier": "triton"
+    },
+    "MambaIR_CAR_q10.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "b5cb5f8ab6246e08aad9a86875518ae6c8d4ca4ea782952f8a0584fc8353d8f0",
+      "shape": [
+        1,
+        128,
+        128,
+        3
+      ],
+      "sum": 24310.935754,
+      "tier": "triton"
+    },
+    "mambairv2_classicSR_Large_x2.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "aeb7027df3ad79f5675c94f19414379fd27246c5e68e1f80f8e8027d3d988a2e",
+      "shape": [
+        1,
+        256,
+        256,
+        3
+      ],
+      "sum": 97600.632777,
+      "tier": "triton"
+    },
+    "mambairv2_classicSR_Large_x3.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "d6531dcb5fa0d0e89bac061696c18c9619b758786c3a7f1127cac87b69908717",
+      "shape": [
+        1,
+        384,
+        384,
+        3
+      ],
+      "sum": 223647.050132,
+      "tier": "triton"
+    },
+    "mambairv2_classicSR_Large_x4.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "da2589579bd05cc8bf8275a34d949e42c104aeb5069b406bed741fa6afaf849f",
+      "shape": [
+        1,
+        512,
+        512,
+        3
+      ],
+      "sum": 392880.896079,
+      "tier": "triton"
+    },
+    "mambairv2_lightSR_x2.pth": {
+      "dtype": "torch.float32",
+      "max": 1.0,
+      "min": 0.0,
+      "sha256": "07b3eab254a0f40c8062442125406bffbaf67060eecb439b1adb57a2d5639c73",
+      "shape": [
+        1,
+        256,
+        256,
+        3
+      ],
+      "sum": 98592.823681,
+      "tier": "triton"
+    },
+    "realDN.pth": {
+      "dtype": "torch.float32",
+      "max": 0.725584,
+      "min": 0.530834,
+      "sha256": "8114010f3007fb615b447528ac788df13c31f831f822692a825c9a29a72f5437",
+      "shape": [
+        1,
+        128,
+        128,
+        3
+      ],
+      "sum": 30585.954748,
+      "tier": "triton"
+    }
+  },
+  "seed": 0,
+  "torch": "2.10.0+cu130"
+}
