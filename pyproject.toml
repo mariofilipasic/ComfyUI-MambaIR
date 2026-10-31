@@ -14,6 +14,12 @@ dependencies = [
     # intentionally empty: torch, einops and spandrel ship with ComfyUI
 ]
 
+[project.urls]
+#: where a tool that read this metadata (pip show, deps.dev, Renovate) should look.
+Homepage = "https://github.com/mariofilipasic/ComfyUI-MambaIR"
+Repository = "https://github.com/mariofilipasic/ComfyUI-MambaIR"
+Issues = "https://github.com/mariofilipasic/ComfyUI-MambaIR/issues"
+
 [project.optional-dependencies]
 triton = ["triton-windows; sys_platform == 'win32'", "triton; sys_platform != 'win32'"]
 #: dev-only: the style gate for editors and CI. The test suite enforces the same rules without it.

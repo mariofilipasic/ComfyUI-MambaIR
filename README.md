@@ -23,7 +23,7 @@ ComfyUI Manager → search "MambaIR", or:
 
 ```sh
 cd ComfyUI/custom_nodes
-git clone <this repo> ComfyUI-MambaIR
+git clone https://github.com/mariofilipasic/ComfyUI-MambaIR.git
 # restart ComfyUI — there are no Python dependencies to install
 ```
 
