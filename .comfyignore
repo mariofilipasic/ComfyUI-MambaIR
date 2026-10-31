@@ -1,0 +1,5 @@
+# Kept in git, left out of the archive Manager downloads. Licence texts and
+# PROVENANCE.md stay in.
+tests/
+docs/
+.github/

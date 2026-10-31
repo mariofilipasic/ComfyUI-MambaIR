@@ -27,6 +27,9 @@ git clone https://github.com/mariofilipasic/ComfyUI-MambaIR.git
 # restart ComfyUI — there are no Python dependencies to install
 ```
 
+The registry package is `mambair`, so `comfy node install mambair` is the same pack where
+`comfy-cli` is available.
+
 Requirements: a recent ComfyUI (V3 node API, ≥ v0.3.48; older builds get a V1 node automatically),
 `torch`, `einops`, `spandrel` — all shipped with ComfyUI. **No CUDA toolchain, no `mamba_ssm`,
 no `causal_conv1d`.** Developed and measured on CUDA and CPU; the scan is plain PyTorch, so other

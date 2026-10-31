@@ -80,7 +80,7 @@ def test_installed_metadata_matches_the_source_when_installed():
     from importlib.metadata import PackageNotFoundError, version
 
     try:
-        installed = version("comfyui-mambair")
+        installed = version("mambair")
     except PackageNotFoundError:
         return "skip"
     assert installed == _packaged(), (installed, _packaged())

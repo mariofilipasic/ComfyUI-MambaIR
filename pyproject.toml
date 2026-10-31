@@ -3,19 +3,24 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "comfyui-mambair"
+#: registry node id; the registry asks that "ComfyUI" stay out of it.
+name = "mambair"
 version = "0.1.0"
 description = "MambaIR / MambaIRv2 state-space upscale and restoration models as native ComfyUI upscale models"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "Mario Filipasic" }]
 license = { text = "AGPL-3.0-or-later" }
+#: read by the registry's OS and accelerator filters.
+classifiers = [
+    "Operating System :: OS Independent",
+    "Environment :: GPU :: NVIDIA CUDA",
+]
 dependencies = [
     # intentionally empty: torch, einops and spandrel ship with ComfyUI
 ]
 
 [project.urls]
-#: where a tool that read this metadata (pip show, deps.dev, Renovate) should look.
 Homepage = "https://github.com/mariofilipasic/ComfyUI-MambaIR"
 Repository = "https://github.com/mariofilipasic/ComfyUI-MambaIR"
 Issues = "https://github.com/mariofilipasic/ComfyUI-MambaIR/issues"
@@ -33,6 +38,12 @@ packages = ["mambair", "mambair.archs"]
 #: both texts ship: the vendored architectures keep their own licence (see PROVENANCE.md).
 #: Kept under [tool.setuptools] rather than [project] so it works with the `setuptools>=61` floor.
 license-files = ["LICENSE", "LICENSE-APACHE-2.0"]
+
+[tool.comfy]
+#: read by `comfy node publish` and ComfyUI Manager.
+PublisherId = "mariofilipasic"
+DisplayName = "MambaIR"
+requires-comfyui = ">=0.3.48"
 
 [tool.ruff]
 # vendored upstream code keeps its own (byte-identical) formatting
