@@ -23,9 +23,16 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v7
-      - name: Publish Custom Node
-        uses: Comfy-Org/publish-node-action@1.0.1
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          personal_access_token: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
-          # this workflow already checked out; the action's own checkout is redundant.
-          skip_checkout: "true"
+          python-version: "3.12"
+      - name: Install comfy-cli
+        run: pip install "comfy-cli>=1.24,<2"
+      - name: Publish
+        env:
+          REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
+        run: |
+          comfy --skip-prompt --no-enable-telemetry env > /dev/null
+          comfy tracking disable
+          comfy node publish --token "$REGISTRY_ACCESS_TOKEN"
